@@ -14,3 +14,4 @@ services:
       - MAIL_USER=seuemail@provedor.com.br
       - MAIL_PASS=senhaemail
       - MAIL_FROM=semailenvio@provedor.com.br
+      - PORT=3000
