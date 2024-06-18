@@ -1,0 +1,23 @@
+### Instruções de uso
+
+1. **Certifique-se de ter o Docker e o Docker Compose instalados em sua máquina.**
+
+2. **Construa e inicie os serviços usando Docker Compose:**
+
+   ```bash
+   docker-compose up --build
+   ```
+
+3. **Acesse a aplicação no navegador:**
+
+   Abra o navegador e acesse `http://localhost:3000` para verificar se o servidor está funcionando corretamente.
+
+4. **Envio de e-mails:**
+
+   Utilize ferramentas como `curl`, Postman ou faça uma requisição HTTP POST para `http://localhost:3000/email` conforme descrito anteriormente no README.
+
+5. **Documentação da API:**
+
+   Acesse `http://localhost:3000/api-docs` para visualizar a documentação interativa do Swagger.
+
+Isso deve configurar e rodar seu servidor de envio de e-mails em um contêiner Docker, garantindo que todas as dependências e variáveis de ambiente estejam devidamente configuradas.

@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  email-sending-server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - MAIL_HOST='mail.provedor.com.br'
+      - MAIL_PORT=465
+      - MAIL_SECURE=true
+      - MAIL_USER=seuemail@provedor.com.br
+      - MAIL_PASS=senhaemail
+      - MAIL_FROM=semailenvio@provedor.com.br
