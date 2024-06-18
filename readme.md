@@ -31,29 +31,15 @@ npm install
 
 ## Configuração
 
-Antes de executar o servidor, você precisa configurar as credenciais de e-mail no código. No arquivo `index.js`, substitua os valores de `user` e `pass` com seu e-mail e senha.
+Antes de executar o servidor, você precisa configurar as credenciais de e-mail no código. Crie um arquivo `.env` na raiz do projeto e adicione as seguintes variáveis:
 
-```javascript
-const transporter = nodemailer.createTransport({
-    host: "mail.provedor.com.br",
-    port: 465,
-    secure: true, // true para conexão segura (SSL/TLS)
-    auth: {
-        user: 'seuemail@provedor.com.br', // substitua com seu e-mail
-        pass: 'senhaemail' // substitua com sua senha
-    }
-});
-```
-
-Além disso, substitua o endereço de e-mail de `from` em `mailOptions` com o e-mail de envio.
-
-```javascript
-const mailOptions = {
-    from: 'semailenvio@provedor.com.br', // substitua com seu e-mail de envio
-    to: send_to,
-    subject: send_subject,
-    text: send_text
-};
+```plaintext
+MAIL_HOST=mail.provedor.com.br
+MAIL_PORT=465
+MAIL_SECURE=true
+MAIL_USER=seuemail@provedor.com.br
+MAIL_PASS=senhaemail
+MAIL_FROM=semailenvio@provedor.com.br
 ```
 
 ## Uso

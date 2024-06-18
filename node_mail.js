@@ -3,6 +3,7 @@ const express = require('express');
 const cors = require('cors');
 const swaggerJsdoc = require('swagger-jsdoc');
 const swaggerUi = require('swagger-ui-express');
+require('dotenv').config();  // Carrega as variáveis de ambiente do arquivo .env
 
 const app = express();
 const PORT = 3000;
@@ -23,18 +24,18 @@ async function send_email(send_to, send_subject, send_text) {
     try {
         // Configuração do transportador do Nodemailer
         const transporter = nodemailer.createTransport({
-            host: "mail.provedor.com.br",
-            port: 465,
-            secure: true, // true para conexão segura (SSL/TLS)
+            host: process.env.MAIL_HOST,
+            port: process.env.MAIL_PORT,
+            secure: process.env.MAIL_SECURE === true, // true para conexão segura (SSL/TLS)
             auth: {
-                user: 'seuemail@provedor.com.br', // Seu endereço de e-mail
-                pass: 'senhaemail' // Sua senha de e-mail
+                user: process.env.MAIL_USER, // Seu endereço de e-mail
+                pass: process.env.MAIL_PASS // Sua senha de e-mail
             }
         });
 
         // Opções do e-mail
         const mailOptions = {
-            from: 'semailenvio@provedor.com.br', // Endereço de e-mail do remetente
+            from: process.env.MAIL_FROM, // Endereço de e-mail do remetente
             to: send_to, // Endereço de e-mail do destinatário
             subject: send_subject, // Assunto do e-mail
             text: send_text // Corpo do e-mail
