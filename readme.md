@@ -40,6 +40,7 @@ MAIL_SECURE=true
 MAIL_USER=seuemail@provedor.com.br
 MAIL_PASS=senhaemail
 MAIL_FROM=semailenvio@provedor.com.br
+PORT=3000
 ```
 
 ## Uso
@@ -52,6 +53,12 @@ npm start
 
 2. O servidor estará rodando na porta 3000. Você pode verificar acessando `http://localhost:3000` em seu navegador, que deve retornar um JSON com uma mensagem de detalhes do servidor.
 
+
+3. Para subir via docker
+
+    Para ver mais detalhes, confira o [DOCKER README](readme_docker.md).
+
+
 ### Envio de E-mails
 
 Para enviar um e-mail, faça uma requisição HTTP POST para `http://localhost:3000/email` com o seguinte formato de JSON no corpo da requisição:
@@ -62,8 +69,8 @@ Para enviar um e-mail, faça uma requisição HTTP POST para `http://localhost:3
   "send_subject": "Assunto do Email",
   "send_text": "Corpo do email"
 }
-```
 
+```
 ### Exemplos de Requisição
 
 Utilizando `curl`:
