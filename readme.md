@@ -19,8 +19,8 @@ Este repositório contém um servidor Express.js simples que utiliza o Nodemaile
 1. Clone o repositório:
 
 ```bash
-git clone https://github.com/seuusuario/email-sending-server.git
-cd email-sending-server
+git clone https://github.com/m4n1nh0/send_email.git
+cd send_email
 ```
 
 2. Instale as dependências:
