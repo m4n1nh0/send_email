@@ -43,7 +43,7 @@ emailRoutes.get('/', (req, res) => {
  *                 type: string
  *                 description: O corpo do e-mail
  *                 example: Corpo do email
- *     responses:
+  *     responses:
  *       200:
  *         description: Resultado do envio do e-mail
  *         content:
@@ -54,6 +54,16 @@ emailRoutes.get('/', (req, res) => {
  *                 detail:
  *                   type: string
  *                   example: Email enviado com sucesso
+ *       400:
+ *         description: Falha no envio do e-mail
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 detail:
+ *                   type: string
+ *                   example: Email não enviado
  */
 emailRoutes.post('/email', async (req, res) => {
     // Rota POST para enviar um email
@@ -63,7 +73,7 @@ emailRoutes.post('/email', async (req, res) => {
     if (envio) {
         res.send({ detail: 'Email enviado com sucesso' }); // Resposta de sucesso
     } else {
-        res.send({ detail: 'Email não enviado' }); // Resposta de falha
+        res.status(400).send({ detail: 'Email não enviado' }); // Resposta de falha
     }
 });
 

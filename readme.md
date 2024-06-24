@@ -106,6 +106,12 @@ fetch('http://localhost:3000/email', {
 
 A documentação da API está disponível através do Swagger. Acesse `http://localhost:3000/api-docs` para visualizar a documentação interativa e testar os endpoints.
 
+
+### Teste da API
+
+Para realizar os testes, confira o [TEST README](readme_test.md).
+
+
 ## Licença
 
 Este projeto está licenciado sob a Licença MIT. Veja o arquivo `LICENSE` para mais detalhes.

@@ -8,10 +8,25 @@ services:
     ports:
       - "3000:3000"
     environment:
-      - MAIL_HOST='mail.provedor.com.br'
+      - MAIL_HOST=sandbox.smtp.mailtrap.io
       - MAIL_PORT=465
       - MAIL_SECURE=true
-      - MAIL_USER=seuemail@provedor.com.br
-      - MAIL_PASS=senhaemail
-      - MAIL_FROM=semailenvio@provedor.com.br
+      - MAIL_USER=7daa946e9c9bf6
+      - MAIL_PASS=e0fd75d6984bee
+      - MAIL_FROM=test@example.com
       - PORT=3000
+
+  email-sending-test:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: ["npm", "test"]
+    environment:
+      - MAIL_HOST=sandbox.smtp.mailtrap.io
+      - MAIL_PORT=465
+      - MAIL_SECURE=true
+      - MAIL_USER=7daa946e9c9bf6
+      - MAIL_PASS=e0fd75d6984bee
+      - MAIL_FROM=test@example.com
+      - PORT=3000
+

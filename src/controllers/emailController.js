@@ -21,8 +21,13 @@ async function send_email(send_to, send_subject, send_text) {
 
         // Envia o e-mail e aguarda a resposta
         const info = await transporter.sendMail(mailOptions);
-        console.log(info.response); // Log da resposta do envio
-        return true;
+        try {
+            console.log(info.response); // Log da resposta do envio
+            return true;
+        } catch (error) {
+            console.error(error); // Log de erro em caso de falha ao logar a resposta
+            return false;
+        }
     } catch (error) {
         console.error(error); // Log de erro em caso de falha ao enviar o e-mail
         return false;
