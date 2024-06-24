@@ -1,21 +1,36 @@
-# Security Policy
+Para criar uma política de segurança adequada para o GitHub do seu projeto, é importante abordar diferentes aspectos que visam garantir a segurança do código, dos colaboradores e dos usuários finais. Abaixo está um exemplo de um Security Policy básico que você pode adotar e adaptar conforme necessário para o seu projeto:
 
-## Supported Versions
+---
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
+# Política de Segurança
 
-| Version | Supported          |
-| ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
-| < 4.0   | :x:                |
+## Responsabilidades da Equipe de Desenvolvimento
 
-## Reporting a Vulnerability
+1. **Manutenção de Dependências Seguras:**
+   - Verificar regularmente e atualizar as dependências do projeto para versões seguras e livres de vulnerabilidades conhecidas.
 
-Use this section to tell people how to report a vulnerability.
+2. **Revisão de Código:**
+   - Garantir que todo o código enviado passe por revisão por pares antes de ser mesclado no branch principal (main). Isso ajuda a identificar potenciais problemas de segurança antes da implantação.
 
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+3. **Tratamento de Vulnerabilidades:**
+   - Responder prontamente a relatórios de segurança e vulnerabilidades. Corrigir e divulgar publicamente correções assim que possível.
+
+## Relatando Vulnerabilidades
+
+Se você descobrir uma vulnerabilidade de segurança neste projeto, pedimos que você nos avise imediatamente. Isso permite que tomemos medidas para mitigar o problema antes que ele afete os usuários do projeto.
+
+Para relatar uma vulnerabilidade, envie um e-mail para [marianofmendonca@gmail.com] com as seguintes informações:
+
+- Descrição detalhada da vulnerabilidade
+- Passos reproduzíveis (se aplicável)
+- Versão afetada do projeto (se conhecida)
+
+Responderemos dentro de [24] horas para confirmar o recebimento do seu relatório. Trabalharemos com você para avaliar e resolver a vulnerabilidade o mais rapidamente possível.
+
+## Atualizações de Segurança
+
+As atualizações de segurança críticas serão lançadas o mais rápido possível após a identificação e correção de vulnerabilidades. É responsabilidade dos usuários do projeto manter-se atualizados com as versões mais recentes para garantir a segurança de seus sistemas.
+
+---
+
+Adapte as informações acima com os detalhes específicos do seu projeto, como o endereço de e-mail para relatar vulnerabilidades, o tempo de resposta esperado e quaisquer outras diretrizes específicas que você deseja incluir. Essa política deve ser clara e acessível para todos os colaboradores e usuários do seu repositório GitHub.
