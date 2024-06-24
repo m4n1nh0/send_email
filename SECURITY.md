@@ -1,7 +1,3 @@
-Para criar uma política de segurança adequada para o GitHub do seu projeto, é importante abordar diferentes aspectos que visam garantir a segurança do código, dos colaboradores e dos usuários finais. Abaixo está um exemplo de um Security Policy básico que você pode adotar e adaptar conforme necessário para o seu projeto:
-
----
-
 # Política de Segurança
 
 ## Responsabilidades da Equipe de Desenvolvimento
@@ -31,6 +27,3 @@ Responderemos dentro de [24] horas para confirmar o recebimento do seu relatóri
 
 As atualizações de segurança críticas serão lançadas o mais rápido possível após a identificação e correção de vulnerabilidades. É responsabilidade dos usuários do projeto manter-se atualizados com as versões mais recentes para garantir a segurança de seus sistemas.
 
----
-
-Adapte as informações acima com os detalhes específicos do seu projeto, como o endereço de e-mail para relatar vulnerabilidades, o tempo de resposta esperado e quaisquer outras diretrizes específicas que você deseja incluir. Essa política deve ser clara e acessível para todos os colaboradores e usuários do seu repositório GitHub.
